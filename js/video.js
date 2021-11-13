@@ -58,10 +58,9 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 });
 
-document.querySelector("#slider").addEventListener("change", function() {
-	console.log(this.value);
-	let vol = document.querySelector("#volume").innerHTML = this.value + "%";
-	video.volume = this.value / 100;
+document.querySelector("#slider").addEventListener("click", function(){
+	video.volume = this.value/100
+	document.querySelector("#volume").innerHTML=video.volume*100+"%"
 
 });
 document.querySelector("#vintage").addEventListener("click", function(){
