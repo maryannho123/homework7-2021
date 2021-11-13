@@ -1,5 +1,5 @@
 var video;
-var vol; 
+var volume; 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
 	video =document.querySelector("#player1");
@@ -60,7 +60,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 document.querySelector("#slider").addEventListener("change", function() {
 	console.log(this.value);
-	document.querySelector("#volume").innerHTML = this.value + "%";
+	let vol = document.querySelector("#volume").innerHTML = this.value + "%";
 	video.volume = this.value / 100;
 
 });
